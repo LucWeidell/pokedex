@@ -13,15 +13,42 @@ export default class Pokemon{
   }
 
   get Template(){
-    // FIXME fix template
+    let realWeight = this.weight + ''
+    realWeight = realWeight.split('').splice(realWeight.length-2,0,'.').join()
+    console.log('weight:', realWeight)
     return /*html*/ `
-    sadasdasds
+    <div class="row col-right-mon">
+      <div class="col-md-12 text-left">
+        <h3>Active Pokemon:</h3>
+        <img src="${this.img}"
+        alt="${this.name}">
+        <h4>Pokemon: ${this.name}</h4>
+        <p><b>Height: </b> ${this.height}</p>
+        <p><b>Weight: </b> ${realWeight}kg</p>
+        <p><b>Type: </b>${this.type}</p>
+    </div>
+    ${this.Button}
     `
   }
 
   get Button(){
+    let template = ''
     if(this.forms){
-
+      template += /*html*/`
+      <div class="col-md-12 pb-2 d-flex justify-content-end align-items-end">
+        <button type="button" class="btn btn-danger"
+        onclick="app.myPokemonsController.removeMon()" "disabled">Release!</button>
+        <button type="button" class="btn btn-success" onclick="app.myPokemonsController.addMon()">Catch!</button>
+      </div>
+      `
+      return template
     }
+    template += /*html*/`
+    <div class="col-md-12 pb-2 d-flex justify-content-end align-items-end">
+      <button type="button" class="btn btn-danger"
+      onclick="app.myPokemonsController.removeMon()">Release!</button>
+      <button type="button" class="btn btn-success" onclick="app.myPokemonsController.addMon()" "disabled">Catch!</button>
+    </div>
+    `
   }
 }
