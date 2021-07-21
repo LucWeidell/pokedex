@@ -1,6 +1,6 @@
 export const monApi = axios.create({
-  baseURL: 'https://pokeapi.co/api/v2/',
-  timeout: 5000
+  baseURL: 'https://pokeapi.co/api/v2',
+  timeout: 100000
 })
 
 export const myMonApi = axios.create({

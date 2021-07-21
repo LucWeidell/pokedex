@@ -1,9 +1,9 @@
 
 export default class Pokemon{
 
-  constructor({name, img, weight, height, type, forms, id}){
+  constructor({name, img, weight, height, type, forms, id, sprites}){
     this.name = name;
-    this.img = img;
+    this.img = img || sprites.other.dream_world.front_default;
     this.weight = weight;
     this.height = height;
     this.type = type;
@@ -16,6 +16,7 @@ export default class Pokemon{
     let realWeight = this.weight + ''
     realWeight = realWeight.split('').splice(realWeight.length-2,0,'.').join()
     console.log('weight:', realWeight)
+    let type = this.type.join(" ")
     return /*html*/ `
     <div class="row col-right-mon">
       <div class="col-md-12 text-left">
@@ -25,7 +26,7 @@ export default class Pokemon{
         <h4>Pokemon: ${this.name}</h4>
         <p><b>Height: </b> ${this.height}</p>
         <p><b>Weight: </b> ${realWeight}kg</p>
-        <p><b>Type: </b>${this.type}</p>
+        <p><b>Type: </b>${type}</p>
     </div>
     ${this.Button}
     `
