@@ -27,12 +27,12 @@
                 <!-- NOTE this is for all and seen mons -->
                 <div class="row justify-content-center align-items-center main-row">
                     <div class="col-md-9 m-1 bg-white shadow side-bar-scroll col-left-mon" id = "all-mons">
-                        <h3>All Pokemon</h3>
+                        <h3>All Pokemon:</h3>
                         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
                         alt="bulbasaur" onclick= "add.pokemonsController.getMon('IDHERE')">
                     </div>
                     <div class="col-md-9 m-1 bg-white shadow col-left-mon" id = "my-mons">
-                        <h3>Caught Pokemon</h3>
+                        <h3>Caught Pokemon:</h3>
                         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
                         alt="bulbasaur" onclick= "add.myPokemonsController.SetMon('IDHERE')">
                     </div>
@@ -40,11 +40,20 @@
             </div>
             <!-- NOTE active mon -->
             <div class="col-md-6 m-2 justify-content-end bg-white shadow col-right-mon" id = 'active-mon'>
-                <h3>Active Pokemon:</h3>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                alt="bulbasaur">
-
-
+                <div class="row col-right-mon">
+                    <div class="col-md-12 text-left">
+                        <h3>Active Pokemon:</h3>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                        alt="bulbasaur">
+                        <h4>Pokemon: </h4>
+                        <p><b>Height: </b> </p>
+                        <p><b>Type: </b> </p>
+                    </div>
+                    <div class="col-md-12 pb-2 d-flex justify-content-end align-items-end">
+                        <button type="button" class="btn btn-danger ">Release!</button>
+                        <button type="button" class="btn btn-success">Catch!</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
