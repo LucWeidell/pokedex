@@ -51,4 +51,19 @@ export default class Pokemon{
     </div>
     `
   }
+
+  get ImgClickable(){
+    return /*html*/ `
+      <img src="${this.img}"
+      alt="${this.name}" onclick= "add.pokemonsController.getMon('${this.id}')">
+      </div>
+    `
+  }
+
+  get MyImgClickable(){
+    return /*html*/ `
+    <img src="${this.img}"
+    alt="${this.name}" onclick= "add.myPokemonsController.SetMon('${this.id}')">
+    `
+  }
 }
