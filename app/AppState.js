@@ -1,11 +1,13 @@
-
+import Pokemon from "./Models/Pokemon.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-
+  /**@type{Pokemon[]} */
   monsSeen = []
+  /**@type{Pokemon} */
   activeMon = null
+  /**@type{Pokemon[]} */
   monsCaught = []
 }
 
