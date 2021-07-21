@@ -1,6 +1,6 @@
-import { ProxyState } from "../AppState";
-import Pokemon from "../Models/Pokemon";
-import { myMonApi } from "./AxiosService";
+import { ProxyState } from "../AppState.js";
+import Pokemon from "../Models/Pokemon.js";
+import { myMonApi } from "./AxiosService.js";
 
 class MyPokemonsService {
   async removeMon() {

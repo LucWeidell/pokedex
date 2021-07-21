@@ -1,4 +1,4 @@
-import { ProxyState } from "../AppState";
+import { ProxyState } from "../AppState.js";
 import { pokemonsService } from "../Services/PokemonsService.js";
 
 
