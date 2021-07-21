@@ -17,12 +17,36 @@
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">pokedex</span>
+                <span class="ml-2">Pokedex</span>
             </a>
         </nav>
     </header>
-    <main class="container">
-        <div id="app"></div>
+    <main class="container-fluid bg-red">
+        <div class="row bg-red justify-content-around align-items-center main-row">
+            <div class="col-md-5">
+                <!-- NOTE this is for all and seen mons -->
+                <div class="row justify-content-center align-items-center main-row">
+                    <div class="col-md-9 m-1 bg-white shadow side-bar-scroll col-left-mon" id = "all-mons">
+                        <h3>All Pokemon</h3>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                        alt="bulbasaur" onclick= "add.pokemonsController.getMon('IDHERE')">
+                    </div>
+                    <div class="col-md-9 m-1 bg-white shadow col-left-mon" id = "my-mons">
+                        <h3>Caught Pokemon</h3>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                        alt="bulbasaur" onclick= "add.myPokemonsController.SetMon('IDHERE')">
+                    </div>
+                </div>
+            </div>
+            <!-- NOTE active mon -->
+            <div class="col-md-6 m-2 justify-content-end bg-white shadow col-right-mon" id = 'active-mon'>
+                <h3>Active Pokemon:</h3>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                alt="bulbasaur">
+
+
+            </div>
+        </div>
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">

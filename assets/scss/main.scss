@@ -15,5 +15,33 @@ main {
   flex-grow: 1;
 }
 
+.action{
+  cursor: pointer;
+  &.hover{
+    background-color: green;
+  }
+}
 
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 50%) !important;
+}
+
+.side-bar-scroll {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.main-row {
+  min-height: 85vh;
+}
+
+.col-left-mon {
+  min-height: 40vh;
+  min-width: 40vw;
+}
+
+.col-right-mon {
+  min-height: 82vh;
+  min-width: 40vw;
+}
 
